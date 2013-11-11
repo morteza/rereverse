@@ -1,0 +1,9 @@
+target/
+.DS_Store
+eclipse/
+.classpath
+.history
+.project
+/rereverse.sublime-project
+*.bak
+*.class
