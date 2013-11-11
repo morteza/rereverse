@@ -8,6 +8,10 @@ crossPaths := false
 
 EclipseKeys.projectFlavor := EclipseProjectFlavor.Java
 
+mainClass in (Compile, run):= Some("rereverse.Bootstrap")
+
+seq(com.github.retronym.SbtOneJar.oneJarSettings: _*)
+
 libraryDependencies += "io.netty" % "netty-all" % "4.0.12.Final"
 
 libraryDependencies += "javax.persistence" % "persistence-api" % "1.0.2"
