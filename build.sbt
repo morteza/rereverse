@@ -1,17 +1,33 @@
+//import NativePackagerKeys._
+
+organization := "ir.onto"
+
 name := "rereverse"
 
-version := "0.0.0"
+version := "0.0.1"
+
+mainClass in (Compile, run):= Some("rereverse.Bootstrap")
 
 autoScalaLibrary := false
 
 crossPaths := false
 
+//================================ SBT Modules =================================
+// Typesafe Console 
+//atmosSettings
+
+// Native Packager
+addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "0.6.4")
+
+packageArchetype.java_application
+
+//Eclipse Project
+addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "2.4.0")
+
 EclipseKeys.projectFlavor := EclipseProjectFlavor.Java
+//==============================================================================
 
-mainClass in (Compile, run):= Some("rereverse.Bootstrap")
-
-seq(com.github.retronym.SbtOneJar.oneJarSettings: _*)
-
+// Dependencies
 libraryDependencies += "io.netty" % "netty-all" % "4.0.12.Final"
 
 libraryDependencies += "javax.persistence" % "persistence-api" % "1.0.2"
