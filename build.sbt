@@ -1,4 +1,4 @@
-//import NativePackagerKeys._
+// import NativePackagerKeys._
 
 organization := "ir.onto"
 
@@ -14,21 +14,23 @@ crossPaths := false
 
 //================================ SBT Modules =================================
 // Typesafe Console 
-//atmosSettings
+// addSbtPlugin("com.typesafe.sbt" % "sbt-atmos" % "0.3.+")
+
+// atmosSettings
 
 // Native Packager
-addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "0.6.4")
+// addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "0.+")
 
-packageArchetype.java_application
+// packageArchetype.java_application
 
 //Eclipse Project
-addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "2.4.0")
+// addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "2.+")
 
-EclipseKeys.projectFlavor := EclipseProjectFlavor.Java
+// .EclipseKeys.projectFlavor := EclipseProjectFlavor.Java
 //==============================================================================
 
 // Dependencies
-libraryDependencies += "io.netty" % "netty-all" % "4.0.12.Final"
+libraryDependencies += "io.netty" % "netty-all" % "4.0.12"
 
 libraryDependencies += "javax.persistence" % "persistence-api" % "1.0.2"
 
